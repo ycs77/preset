@@ -2,7 +2,7 @@
 
 [<img src="https://raw.githubusercontent.com/use-preset/awesome-presets/master/preset-logo.svg" align="right" width="100">](https://usepreset.dev)
 
-> A Lucas custom Presets list
+> The Lucas custom Presets list
 
 [Preset](https://usepreset.dev/) is a command line tool for applying existing presets to your freshly scaffolded project, so you don't have to do it manually.
 
