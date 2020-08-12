@@ -12,7 +12,7 @@
 * [Laravel + Tailwind CSS](https://github.com/ycs77/preset-laravel-tailwindcss) - Adds Tailwind CSS to Laravel.
 * [Laravel + Pest](https://github.com/ycs77/preset-laravel-pest) - Adds Pest to Laravel.
 * [Laravel + Inertia](https://github.com/ycs77/preset-laravel-inertia) - Adds Tailwind CSS, Inertia and Vue to a fresh Laravel application.
-* [Laravel TALL stack](https://github.com/ycs77/preset-laravel-tall) - Adds Tailwind CSS, Alpine.js and Livewire to a fresh Laravel application.
+* [Laravel TALL](https://github.com/ycs77/preset-laravel-tall) - Adds Tailwind CSS, Alpine.js and Livewire to a fresh Laravel application.
 
 ### Install Preset
 
