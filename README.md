@@ -12,11 +12,13 @@
 
 [Preset](https://usepreset.dev/) 是一個 CLI 工具，用於快速套用制定好的 Preset 到現成的專案中。
 
+## 執行
+
 ```bash
 npx apply ycs77/presets
 ```
 
-### Laravel Presets
+## Laravel Presets
 
 | Preset                                                              | 安裝指令                                     |
 | ------------------------------------------------------------------- | -------------------------------------------- |
@@ -25,7 +27,7 @@ npx apply ycs77/presets
 | [Inertia.js](https://github.com/ycs77/preset-laravel-inertia)       | `npx apply ycs77/preset-laravel-inertia`     |
 | [Pest](https://github.com/ycs77/preset-laravel-pest)                | `npx apply ycs77/preset-laravel-pest`        |
 
-### Vite Presets
+## Vite Presets
 
 | Preset                                                           | 安裝指令                                  |
 | ---------------------------------------------------------------- | ----------------------------------------- |
