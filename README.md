@@ -15,7 +15,7 @@
 ## 執行
 
 ```bash
-npx apply ycs77/presets
+npx apply ycs77/preset
 ```
 
 ## Laravel Presets
