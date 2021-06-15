@@ -1,29 +1,23 @@
-# Lucas's Presets List
+<p align="center">
+  <br />
+  <a href="https://preset.dev">
+    <img width="100" src="https://raw.githubusercontent.com/preset/cli/main/.github/assets/logo.svg" alt="Logo of the Preset tool">
+  </a>
+  <br />
+</p>
 
-[<img src="https://raw.githubusercontent.com/use-preset/awesome-presets/master/preset-logo.svg" align="right" width="100">](https://usepreset.dev)
+<h2 align="center">Lucas 的 Presets 列表</h2>
 
-> The Lucas custom Presets list
+<br />
 
-[Preset](https://usepreset.dev/) is a command line tool for applying existing presets to your freshly scaffolded project, so you don't have to do it manually.
+[Preset](https://usepreset.dev/) 是一個 CLI 工具，用於快速套用制定好的 Preset 到現成的專案中。
 
-## Laravel
+### Laravel Presets
 
-* [Laravel Initialize](https://github.com/ycs77/preset-laravel-init) - Initialize Laravel for Lucas.
-* [Laravel + Tailwind CSS](https://github.com/ycs77/preset-laravel-tailwindcss) - Adds Tailwind CSS to Laravel.
-* [Laravel + Pest](https://github.com/ycs77/preset-laravel-pest) - Adds Pest to Laravel.
-* [Laravel + Inertia](https://github.com/ycs77/preset-laravel-inertia) - Adds Tailwind CSS, Inertia and Vue to a fresh Laravel application.
-* [Laravel TALL](https://github.com/ycs77/preset-laravel-tall) - Adds Tailwind CSS, Alpine.js and Livewire to a fresh Laravel application.
-
-### Install Preset
-
-| Preset       | Install                                           |
-| ------------ | ------------------------------------------------- |
-| Initialize   | `npx use-preset ycs77/preset-laravel-init`        |
-| Tailwind CSS | `npx use-preset ycs77/preset-laravel-tailwindcss` |
-| Pest         | `npx use-preset ycs77/preset-laravel-pest`        |
-| Inertia      | `npx use-preset ycs77/preset-laravel-inertia`     |
-| TALL         | `npx use-preset ycs77/preset-laravel-tall`        |
-
-## Official Presets
-
-This list is Lucas custom Presets, not official presets. Official presets see [Preset Official Presets](https://github.com/use-preset/awesome-presets).
+| Preset                                                              | Install                                      |
+| ------------------------------------------------------------------- | -------------------------------------------- |
+| [Initialize](https://github.com/ycs77/preset-laravel)               | `npx apply ycs77/preset-laravel`             |
+| [Tailwind CSS](https://github.com/ycs77/preset-laravel-tailwindcss) | `npx apply ycs77/preset-laravel-tailwindcss` |
+| Pest                                                                | `npx apply ycs77/preset-laravel-pest`        |
+| Inertia                                                             | `npx apply ycs77/preset-laravel-inertia`     |
+| TALL                                                                | `npx apply ycs77/preset-laravel-tall`        |
