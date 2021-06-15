@@ -6,7 +6,7 @@
   <br />
 </p>
 
-<h2 align="center">Lucas 的 Presets 列表</h2>
+<h2 align="center">Lucas 的 Presets 集合</h2>
 
 <br />
 

@@ -11,11 +11,11 @@ const definedPresets = {
   ],
 }
 
-Preset.setName('Lucas\'s Presets')
+Preset.setName('Lucas\'s Preset')
 
-Preset.prompt().add('mainFramework', {
+Preset.prompt().add('framework', {
 	type: 'select',
-	name: 'mainFramework',
+	name: 'framework',
 	message: 'Which framework do you want to use?',
   choices: Object.keys(definedPresets),
 })
@@ -25,12 +25,12 @@ Preset.group(preset => {
     type: 'select',
     name: 'preset',
     message: 'Which preset do you want to apply?',
-    choices: definedPresets[preset.prompts.mainFramework],
+    choices: definedPresets[preset.prompts.framework],
   })
 })
 
 Preset.group(preset => {
-  const presetName = preset.prompts.mainFramework + (
+  const presetName = preset.prompts.framework + (
     preset.prompts.preset === 'initialize'
       ? ''
       : `-${preset.prompts.preset}`
