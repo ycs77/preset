@@ -27,7 +27,7 @@ Preset.group(preset => {
     message: 'Which preset do you want to apply?',
     choices: definedPresets[preset.prompts.framework],
   })
-})
+}).withoutTitle()
 
 Preset.group(preset => {
   const presetName = preset.prompts.framework + (
@@ -37,4 +37,4 @@ Preset.group(preset => {
   )
 
   preset.apply(`ycs77/preset-${presetName}`)
-}).ifPrompt('preset')
+}).withoutTitle()
