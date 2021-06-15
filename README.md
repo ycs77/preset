@@ -25,7 +25,6 @@ npx apply ycs77/presets
 | [Initialize](https://github.com/ycs77/preset-laravel)               | `npx apply ycs77/preset-laravel`             |
 | [Tailwind CSS](https://github.com/ycs77/preset-laravel-tailwindcss) | `npx apply ycs77/preset-laravel-tailwindcss` |
 | [Inertia.js](https://github.com/ycs77/preset-laravel-inertia)       | `npx apply ycs77/preset-laravel-inertia`     |
-| [Pest](https://github.com/ycs77/preset-laravel-pest)                | `npx apply ycs77/preset-laravel-pest`        |
 
 ## Vite Presets
 
