@@ -14,7 +14,7 @@
 
 ### Laravel Presets
 
-| Preset                                                              | Install                                      |
+| Preset                                                              | 安裝指令                                     |
 | ------------------------------------------------------------------- | -------------------------------------------- |
 | [Initialize](https://github.com/ycs77/preset-laravel)               | `npx apply ycs77/preset-laravel`             |
 | [Tailwind CSS](https://github.com/ycs77/preset-laravel-tailwindcss) | `npx apply ycs77/preset-laravel-tailwindcss` |
