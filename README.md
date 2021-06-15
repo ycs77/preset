@@ -18,6 +18,5 @@
 | ------------------------------------------------------------------- | -------------------------------------------- |
 | [Initialize](https://github.com/ycs77/preset-laravel)               | `npx apply ycs77/preset-laravel`             |
 | [Tailwind CSS](https://github.com/ycs77/preset-laravel-tailwindcss) | `npx apply ycs77/preset-laravel-tailwindcss` |
-| Pest                                                                | `npx apply ycs77/preset-laravel-pest`        |
 | Inertia                                                             | `npx apply ycs77/preset-laravel-inertia`     |
-| TALL                                                                | `npx apply ycs77/preset-laravel-tall`        |
+| Pest                                                                | `npx apply ycs77/preset-laravel-pest`        |
