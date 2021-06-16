@@ -13,12 +13,14 @@ const definedPresets = {
 
 Preset.setName('Lucas\'s Preset')
 
-Preset.prompt().add('framework', {
-	type: 'select',
-	name: 'framework',
-	message: 'Which framework do you want to use?',
-  choices: Object.keys(definedPresets),
-})
+Preset.group(preset => {
+  preset.prompt().add('framework', {
+    type: 'select',
+    name: 'framework',
+    message: 'Which framework do you want to use?',
+    choices: Object.keys(definedPresets),
+  })
+}).withoutTitle()
 
 Preset.group(preset => {
   preset.prompt().add('preset', {
@@ -35,6 +37,5 @@ Preset.group(preset => {
       ? ''
       : `-${preset.prompts.preset}`
   )
-
   preset.apply(`ycs77/preset-${presetName}`)
 }).withoutTitle()
