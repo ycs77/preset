@@ -14,6 +14,8 @@
 
 ## 執行
 
+執行下方指令後，可以選擇一個要套用的 Preset：
+
 ```bash
 npx apply ycs77/preset
 ```
