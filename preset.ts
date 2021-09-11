@@ -3,11 +3,11 @@ import { Preset } from 'apply'
 const definedPresets = {
   laravel: [
     'initialize',
-    'tailwindcss',
+    'tailwind',
     'inertia',
   ],
   vite: [
-    'tailwindcss',
+    'tailwind',
   ],
 }
 
@@ -33,9 +33,7 @@ Preset.group(preset => {
 
 Preset.group(preset => {
   const presetName = preset.prompts.framework + (
-    preset.prompts.preset === 'initialize'
-      ? ''
-      : `-${preset.prompts.preset}`
+    preset.prompts.preset === 'initialize' ? '' : `-${preset.prompts.preset}`
   )
   preset.apply(`ycs77/preset-${presetName}`)
 }).withoutTitle()
