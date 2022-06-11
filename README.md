@@ -10,26 +10,33 @@
 
 <br />
 
-[Preset](https://usepreset.dev/) 是一個 CLI 工具，用於快速套用制定好的 Preset 到現成的專案中。
+[Preset](https://preset.dev/) 是一個 CLI 工具，用於快速套用制定好的 Preset 到現成的專案中。而這裡是 Lucas 常用的 Presets 集合。
 
 ## 執行
 
 執行下方指令後，可以選擇一個要套用的 Preset：
 
 ```bash
-npx apply ycs77/preset
+npx @ycs77/preset
+```
+
+或是全域安裝執行：
+
+```bash
+npm i -g @ycs77/preset
+ycs77-preset
 ```
 
 ## Laravel Presets
 
-| Preset                                                           | 安裝指令                                  |
-| ---------------------------------------------------------------- | ----------------------------------------- |
-| [Initialize](https://github.com/ycs77/preset-laravel)            | `npx apply ycs77/preset-laravel`          |
-| [Tailwind CSS](https://github.com/ycs77/preset-laravel-tailwind) | `npx apply ycs77/preset-laravel-tailwind` |
-| [Inertia.js](https://github.com/ycs77/preset-laravel-inertia)    | `npx apply ycs77/preset-laravel-inertia`  |
+| Preset                                                           | 安裝指令                        |
+| ---------------------------------------------------------------- | ------------------------------- |
+| [Initialize](https://github.com/ycs77/preset-laravel)            | `ycs77-preset laravel`          |
+| [Tailwind CSS](https://github.com/ycs77/preset-laravel-tailwind) | `ycs77-preset laravel-tailwind` |
+| [Inertia.js](https://github.com/ycs77/preset-laravel-inertia)    | `ycs77-preset laravel-inertia`  |
 
 ## Vite Presets
 
-| Preset                                                        | 安裝指令                               |
-| ------------------------------------------------------------- | -------------------------------------- |
-| [Tailwind CSS](https://github.com/ycs77/preset-vite-tailwind) | `npx apply ycs77/preset-vite-tailwind` |
+| Preset                                                        | 安裝指令                     |
+| ------------------------------------------------------------- | ---------------------------- |
+| [Tailwind CSS](https://github.com/ycs77/preset-vite-tailwind) | `ycs77-preset vite-tailwind` |
