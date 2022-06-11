@@ -18,6 +18,10 @@
   "bin": {
     "ycs77-preset": "dist/cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ycs77/preset.git"
+  },
   "publishConfig": {
     "access": "public"
   },
