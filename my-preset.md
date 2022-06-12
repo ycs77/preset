@@ -43,7 +43,7 @@ myApply({
 ```json
 {
   "name": "@YOUR_USERNAME/preset",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Preset for YOUR_NAME.",
   "author": "YOUR_NAME",
   "license": "MIT",
