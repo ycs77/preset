@@ -17,16 +17,24 @@ const { myApply } = require('@ycs77/preset')
 
 myApply({
   account: 'ycs77',
-  presets: {
-    laravel: [
-      'initialize',
-      'tailwind',
-      'inertia',
-    ],
-    vite: [
-      'tailwind',
-    ],
-  },
+  presets: [
+    {
+      name: 'laravel',
+      choices: [
+        'initialize',
+        'tailwind',
+        'inertia',
+      ],
+    },
+    {
+      name: 'vite',
+      choices: ['tailwind'],
+    },
+  ],
+  questions: [
+    'Which framework do you want to use?',
+    'Which preset do you want to apply?',
+  ],
 })
 ```
 
@@ -60,5 +68,5 @@ myApply({
 
 ## TODO
 
-- [ ] my-preset 初始 repo
-- [ ] 讓 prompt 的問題可以在 options 中定義
+- [ ] my-preset 初始 repo 指令
+- [ ] 開 `ycs77/my-preset` repo & `my-preset` package

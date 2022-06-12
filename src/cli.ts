@@ -4,14 +4,22 @@ import { myApply } from './my-apply'
 
 myApply({
   account: 'ycs77',
-  presets: {
-    laravel: [
-      'initialize',
-      'tailwind',
-      'inertia',
-    ],
-    vite: [
-      'tailwind',
-    ],
-  },
+  presets: [
+    {
+      name: 'laravel',
+      choices: [
+        'initialize',
+        'tailwind',
+        'inertia',
+      ],
+    },
+    {
+      name: 'vite',
+      choices: ['tailwind'],
+    },
+  ],
+  questions: [
+    'Which framework do you want to use?',
+    'Which preset do you want to apply?',
+  ],
 })

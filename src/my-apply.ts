@@ -1,9 +1,17 @@
 import prompts from 'prompts'
 import { exec } from './process'
 
+interface PresetOption {
+  name: string
+  choices?: (PresetOption | string)[]
+}
+
+type PresetOptions = (PresetOption | string)[]
+
 export interface MyApplyOptions {
   account: string
-  presets: Record<string, string[]>
+  presets: PresetOptions
+  questions: string[]
   omitNames?: string[]
   resolveRepoName?: (preset: string) => string
 }
@@ -23,7 +31,7 @@ export function myApply(userOptions: MyApplyOptions) {
   async function main() {
     const presetNameParts =
       getPresetRepoWithOption() ??
-      await getPresetRepoWithPrompt()
+      await getPresetRepoWithPrompt(options.presets)
 
     const presetRepo = resolvePresetRepo(presetNameParts)
 
@@ -36,31 +44,36 @@ export function myApply(userOptions: MyApplyOptions) {
     return optionPreset.split('-')
   }
 
-  async function getPresetRepoWithPrompt() {
-    const { framework: first } = await prompts({
-      type: 'select',
-      name: 'framework',
-      message: 'Which framework do you want to use?',
-      choices: Object
-        .keys(options.presets)
-        .map(framework => ({
-          title: framework,
-          value: framework,
-        })),
-    }) as { framework: keyof typeof options.presets }
+  async function getPresetRepoWithPrompt(
+    presets: PresetOptions,
+    level: number = 0,
+    resultParts: string[] = []
+  ): Promise<string[]> {
+    const pressetsMapping = new Map<string, PresetOption>()
 
-    const { framework: second } = await prompts({
+    const { value } = await prompts({
       type: 'select',
-      name: 'framework',
-      message: 'Which preset do you want to apply?',
-      choices: options.presets[first]
-        .map(preset => ({
-          title: preset,
-          value: preset,
-        })),
-    }) as { framework: string }
+      name: 'value',
+      message: options.questions[level],
+      choices: presets.map(value => {
+        const preset = typeof value === 'string' ? { name: value } : value
+        pressetsMapping.set(preset.name, preset)
+        return {
+          title: preset.name,
+          value: preset.name,
+        }
+      }),
+    }) as { value: string }
 
-    return [first, second]
+    if (!pressetsMapping.get(value).choices) {
+      return [...resultParts, value]
+    }
+
+    return getPresetRepoWithPrompt(
+      pressetsMapping.get(value).choices,
+      level++,
+      [...resultParts, value]
+    )
   }
 
   function resolvePresetRepo(presetNameParts: string[]) {
