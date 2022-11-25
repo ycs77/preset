@@ -1,0 +1,17 @@
+{
+  "name": "@ycs77/preset",
+  "version": "0.1.1",
+  "description": "Preset for Lucas Yang.",
+  "author": "Lucas Yang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ycs77/preset.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "ycs77-preset": "file:.."
+  }
+}

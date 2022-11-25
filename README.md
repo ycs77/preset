@@ -17,13 +17,13 @@
 執行下方指令後，可以選擇一個要套用的 Preset：
 
 ```bash
-npx @ycs77/preset
+npx ycs77-preset
 ```
 
 或是全域安裝執行：
 
 ```bash
-npm i -g @ycs77/preset
+npm i -g ycs77-preset
 ycs77-preset
 ```
 

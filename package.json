@@ -1,17 +1,13 @@
 {
-  "name": "@ycs77/preset",
+  "name": "ycs77-preset",
   "version": "0.1.1",
   "description": "Preset for Lucas Yang.",
   "author": "Lucas Yang",
   "license": "MIT",
   "source": "src/my-apply.esm.js",
   "exports": {
-    "require": "./dist/my-apply.cjs",
-    "default": "./dist/my-apply.esm.js"
+    "./*": "./*"
   },
-  "main": "./dist/my-apply.cjs",
-  "module": "./dist/my-apply.esm.js",
-  "types": "dist/my-apply.d.ts",
   "files": [
     "dist/*"
   ],
@@ -22,18 +18,16 @@
     "type": "git",
     "url": "git+https://github.com/ycs77/preset.git"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "build": "npm-run-all -p build:*",
-    "build:mod": "microbundle src/my-apply.ts --format esm,cjs",
-    "build:cli": "esbuild src/cli.ts --bundle --platform=node --outfile=dist/cli.js",
+    "build": "rimraf dist && npm-run-all -p build:*",
+    "build:mod": "tsup src/cli.ts",
+    "build:cli": "tsup src/my-apply.ts --config tsup-my-apply.config.ts",
     "watch": "npm-run-all -p watch:*",
-    "watch:mod": "microbundle watch src/my-apply.ts --format esm,cjs",
-    "watch:cli": "esbuild src/cli.ts --bundle --platform=node --watch --outfile=dist/cli.js"
+    "watch:mod": "tsup src/cli.ts --watch",
+    "watch:cli": "tsup src/my-apply.ts --config tsup-my-apply.config.ts --watch"
   },
   "dependencies": {
+    "@preset/cli": "^0.7.2",
     "cross-spawn": "^7.0.3",
     "prompts": "^2.4.2"
   },
@@ -41,8 +35,9 @@
     "@types/cross-spawn": "^6.0.2",
     "@types/node": "^17.0.42",
     "@types/prompts": "^2.0.14",
-    "esbuild": "^0.14.43",
-    "microbundle": "^0.15.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "tsup": "^6.5.0",
+    "typescript": "~4.6.4"
   }
 }

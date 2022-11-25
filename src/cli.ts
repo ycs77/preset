@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import { myApply } from './my-apply'
 
 myApply({
