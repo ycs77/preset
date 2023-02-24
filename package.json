@@ -27,7 +27,7 @@
     "watch:cli": "tsup src/my-apply.ts --config tsup-my-apply.config.ts --watch"
   },
   "dependencies": {
-    "@preset/cli": "^0.7.2",
+    "@preset/cli": "0.8.0",
     "cross-spawn": "^7.0.3",
     "prompts": "^2.4.2"
   },
