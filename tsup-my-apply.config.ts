@@ -4,13 +4,11 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   dts: true,
   outExtension({ format }) {
-    switch (format) {
-      case 'cjs':
-        return { js: `.cjs` }
-      case 'esm':
-        return { js: `.mjs` }
-      default:
-        return { js: `.${format}.js` }
+    if (format === 'cjs') {
+      return { js: `.cjs` }
+    } else if (format === 'esm') {
+      return { js: `.mjs` }
     }
+    return { js: `.${format}.js` }
   },
 })
